@@ -26,7 +26,8 @@ export LAUNCHER_WORKDIR=`pwd`
 echo "LAUNCHER_WORKDIR: $LAUNCHER_WORKDIR"
 
 # by default LAUNCHER_PPN is 8 (?)
-export LAUNCHER_PPN=16
+# use LAUNCHER_PPN to control the number of jobs on each node
+export LAUNCHER_PPN=4
 
 $LAUNCHER_DIR/paramrun
 
