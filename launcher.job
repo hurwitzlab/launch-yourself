@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #SBATCH -J launch-yourself.job # Job name
-#SBATCH -N 1 # Total number of nodes (16 cores/node)
+#SBATCH -N 1 # Total number of nodes (16 cores/node on Stampede)
 #SBATCH -n 16 # Total number of tasks
 #SBATCH -p normal # Queue name
 #SBATCH -o launch-yourself.job.o%j # Name of stdout output file (%j expands to jobid)
