@@ -4,7 +4,7 @@ Template script and instructions for using the TACC Launcher on Stampede.
 ## Installation
 Install the HurwitzLab fork of the TACC Launcher in your Stampede home directory.
 ```
-login2.stampede(4)$ git clone git@github.com:hurwitzlab/launcher.git
+login2.stampede(4)$ git clone https://github.com/hurwitzlab/launcher.git
 ```
 
 To get an idea of how to use the launcher clone this repository to some directory on Stampede. For example:
