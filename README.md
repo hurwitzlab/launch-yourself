@@ -106,7 +106,7 @@ Launcher Job Complete
 
 ### Submit launcher.job to two nodes
 
-Submit `launcher.job` to SLURN with `-N 2` to get 2 nodes.
+Submit `launcher.job` to SLURM with `-N 2` to get 2 nodes.
 
 ```
 login2.stampede(110)$ sbatch -N 2 launcher.job
