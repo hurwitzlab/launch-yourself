@@ -18,7 +18,7 @@ Replace `<developer>` with your email address on the following line of `launcher
 #SBATCH --mail-user <developer>@email.arizona.edu
 ```
 
-## Submit launcher.job to a single node
+### Submit launcher.job to a single node
 Submit `launcher.job` to SLURM with `-N 1` to get 1 node. When the job completes you will have a file named something like `launch-yourself.job.o8688690` which shows what happened.
 
 ```
@@ -100,6 +100,6 @@ Launcher Job Complete
 
 ```
 
-## Submit launcher.job to more than one node
+### Submit launcher.job to more than one node
 
 Submit `launcher.job` to SLURN with `-N 2` to get 2 nodes.
