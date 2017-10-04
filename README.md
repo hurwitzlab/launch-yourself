@@ -7,7 +7,7 @@ Install the HurwitzLab fork of the TACC Launcher in your Stampede home directory
 login2.stampede(4)$ git clone https://github.com/hurwitzlab/launcher.git
 ```
 
-To get an idea of how to use the launcher clone this repository to some directory on Stampede. For example:
+To get an idea of how to use the launcher, clone this repository to some directory on Stampede. For example:
 ```
 login2.stampede(103)$ git clone https://github.com/hurwitzlab/launch-yourself.git
 Initialized empty Git repository in /work/04658/jklynch/launch-yourself/.git/
@@ -24,7 +24,7 @@ total 2
 -rw------- 1 jklynch G-814141 4179 Oct  4 17:45 README.md
 ```
 
-Replace `<developer>` with your email address on the following line of `launcher.job`:
+Replace `<developer>@email.arizona.edu` with your email address on the following line of `launcher.job`:
 ```
 #SBATCH --mail-user <developer>@email.arizona.edu
 ```
