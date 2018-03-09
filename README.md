@@ -1,22 +1,17 @@
 # launch-yourself
-Template script and instructions for using the TACC Launcher on Stampede.
+Template script and instructions for using the TACC Launcher on Stampede2.
 
 ## Installation
-Install the HurwitzLab fork of the TACC Launcher in your Stampede home directory.
+To get an idea of how to use the Launcher clone this repository to some directory on Stampede2. For example:
 ```
-login2.stampede(4)$ git clone https://github.com/hurwitzlab/launcher.git
-```
-
-To get an idea of how to use the launcher, clone this repository to some directory on Stampede. For example:
-```
-login2.stampede(103)$ git clone https://github.com/hurwitzlab/launch-yourself.git
+login2.stampede2(103)$ git clone https://github.com/hurwitzlab/launch-yourself.git
 Initialized empty Git repository in /work/04658/jklynch/launch-yourself/.git/
 remote: Counting objects: 27, done.
 remote: Compressing objects: 100% (23/23), done.
 remote: Total 27 (delta 11), reused 13 (delta 4), pack-reused 0
 Unpacking objects: 100% (27/27), done.
-login2.stampede(105)$ cd launch-yourself/
-login2.stampede(106)$ ls -l
+login2.stampede2(105)$ cd launch-yourself/
+login2.stampede2(106)$ ls -l
 total 2
 -rw------- 1 jklynch G-814141  240 Oct  4 17:45 joblist
 -rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher.job
