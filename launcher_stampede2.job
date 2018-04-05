@@ -17,14 +17,10 @@
 # from the older script:
 # do not module load launcher because it is quite old
 # install it yourself and set LAUNCHER_DIR to point at it
+# follow directions here: https://github.com/TACC/launcher#installing-launcher
 
-export LAUNCHER_DIR=~/launcher
-
-echo "LAUNCHER_DIR: $LAUNCHER_DIR"
-
-# no need to change these
-export LAUNCHER_PLUGIN_DIR=$LAUNCHER_DIR/plugins
-export LAUNCHER_RMI=SLURM
+# assuming you installed it to your $HOME
+export LAUNCHER_DIR="$HOME/launcher"
 
 # point LAUNCHER_JOB_FILE at your job file
 export LAUNCHER_JOB_FILE=joblist
