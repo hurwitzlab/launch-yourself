@@ -1,5 +1,5 @@
 # launch-yourself
-Template script and instructions for using the TACC Launcher on Stampede2.
+Template script and instructions for using the [TACC Launcher](https://www.tacc.utexas.edu/research-development/tacc-software/the-launcher) on Stampede2.
 
 ## Installation
 To get an idea of how to use the Launcher clone this repository to some directory on Stampede2. For example:
@@ -23,6 +23,7 @@ Replace `<developer>@email.arizona.edu` with your email address on the following
 ```
 #SBATCH --mail-user <developer>@email.arizona.edu
 ```
+As noted in the launcher_stampede2.job, the launcher pre-installed on TACC still throws some errors. Thus, install launcher yourself as shown here: https://github.com/TACC/launcher#installing-launcher
 
 ### Submit launcher.job to a single node
 Submit `launcher.job` to SLURM with `-N 1` to get 1 node. When the job completes you will have a file named something like `launch-yourself.job.o8688690` which shows what happened.
