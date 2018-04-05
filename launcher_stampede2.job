@@ -14,6 +14,10 @@
 # but I still get some errors
 #module load launcher
 
+# from the older script:
+# do not module load launcher because it is quite old
+# install it yourself and set LAUNCHER_DIR to point at it
+
 export LAUNCHER_DIR=~/launcher
 
 echo "LAUNCHER_DIR: $LAUNCHER_DIR"
