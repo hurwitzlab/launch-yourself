@@ -1,5 +1,5 @@
 # launch-yourself
-Template script and instructions for using the TACC Launcher on Stampede2.
+Template script and instructions for using the [TACC Launcher](https://www.tacc.utexas.edu/research-development/tacc-software/the-launcher) on Stampede2.
 
 ## Installation
 To get an idea of how to use the Launcher clone this repository to some directory on Stampede2. For example:
@@ -14,21 +14,22 @@ login2.stampede2(105)$ cd launch-yourself/
 login2.stampede2(106)$ ls -l
 total 2
 -rw------- 1 jklynch G-814141  240 Oct  4 17:45 joblist
--rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher.job
+-rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher_stampede2.job
 -rw------- 1 jklynch G-814141 1068 Oct  4 17:45 LICENSE
 -rw------- 1 jklynch G-814141 4179 Oct  4 17:45 README.md
 ```
 
-Replace `<developer>@email.arizona.edu` with your email address on the following line of `launcher.job`:
+Replace `<developer>@email.arizona.edu` with your email address on the following line of `launcher_stampede2.job`:
 ```
 #SBATCH --mail-user <developer>@email.arizona.edu
 ```
+As noted in the launcher_stampede2.job, the launcher pre-installed on TACC still throws some errors. Thus, install launcher yourself as shown here: https://github.com/TACC/launcher#installing-launcher
 
-### Submit launcher.job to a single node
-Submit `launcher.job` to SLURM with `-N 1` to get 1 node. When the job completes you will have a file named something like `launch-yourself.job.o8688690` which shows what happened.
+### Submit launcher_stampede2.job to a single node
+Submit `launcher_stampede2.job` to SLURM with `-N 1` to get 1 node. When the job completes you will have a file named something like `launch-yourself.job.o8688690` which shows what happened.
 
 ```
-login2.stampede(107)$ sbatch -N 1 launcher.job
+login2.stampede2(107)$ sbatch -N 1 launcher_stampede2.job
 -----------------------------------------------------------------
               Welcome to the Stampede Supercomputer
 -----------------------------------------------------------------
@@ -44,14 +45,14 @@ No reservation for this job
 --> Verifying job request is within current queue limits...OK
 --> Checking available allocation (iPlant-Collabs)...OK
 Submitted batch job 8688703
-login2.stampede(108)$ ls -l
+login2.stampede2(108)$ ls -l
 total 24
 -rw------- 1 jklynch G-814141  240 Oct  4 17:45 joblist
--rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher.job
+-rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher_stampede2.job
 -rw------- 1 jklynch G-814141 1717 Oct  4 17:47 launch-yourself.job.o8688703
 -rw------- 1 jklynch G-814141 1068 Oct  4 17:45 LICENSE
 -rw------- 1 jklynch G-814141 4179 Oct  4 17:45 README.md
-login2.stampede(109)$ cat launch-yourself.job.o8688703
+login2.stampede2(109)$ cat launch-yourself.job.o8688703
 LAUNCHER_WORKDIR: /work/04658/jklynch/launch-yourself
 Launcher: Setup complete.
 
@@ -99,12 +100,12 @@ Launcher Job Complete
 
 ```
 
-### Submit launcher.job to two nodes
+### Submit launcher_stampede2.job to two nodes
 
-Submit `launcher.job` to SLURM with `-N 2` to get 2 nodes.
+Submit `launcher_stampede2.job` to SLURM with `-N 2` to get 2 nodes.
 
 ```
-login2.stampede(110)$ sbatch -N 2 launcher.job
+login2.stampede2(110)$ sbatch -N 2 launcher_stampede2.job
 -----------------------------------------------------------------
               Welcome to the Stampede Supercomputer
 -----------------------------------------------------------------
@@ -120,15 +121,15 @@ No reservation for this job
 --> Verifying job request is within current queue limits...OK
 --> Checking available allocation (iPlant-Collabs)...OK
 Submitted batch job 8688706
-login2.stampede(111)$ ls -l
+login2.stampede2(111)$ ls -l
 total 25
 -rw------- 1 jklynch G-814141  240 Oct  4 17:45 joblist
--rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher.job
+-rw------- 1 jklynch G-814141 1059 Oct  4 17:45 launcher_stampede2.job
 -rw------- 1 jklynch G-814141 1717 Oct  4 17:47 launch-yourself.job.o8688703
 -rw------- 1 jklynch G-814141 1845 Oct  4 17:50 launch-yourself.job.o8688706
 -rw------- 1 jklynch G-814141 1068 Oct  4 17:45 LICENSE
 -rw------- 1 jklynch G-814141 4179 Oct  4 17:45 README.md
-login2.stampede(112)$ cat launch-yourself.job.o8688706
+login2.stampede2(112)$ cat launch-yourself.job.o8688706
 LAUNCHER_WORKDIR: /work/04658/jklynch/launch-yourself
 Launcher: Setup complete.
 
